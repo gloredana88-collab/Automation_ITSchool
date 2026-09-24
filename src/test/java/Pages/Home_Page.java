@@ -1,6 +1,7 @@
 package Pages;
 
 import Helper_Methodes.Elements_Methods;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +12,11 @@ public class Home_Page {
     WebDriver driver;
     Elements_Methods elementsMethods;
 
+//    JavascriptExecutor js;
+
     public Home_Page(WebDriver driver) {
         this.driver = driver;
+//        this.js = (JavascriptExecutor) driver;
         this.elementsMethods = new Elements_Methods(driver);
         PageFactory.initElements(driver,this);
     }
@@ -35,8 +39,17 @@ public class Home_Page {
         elementsMethods.clickElement(alertsButton);
     }
 
+
+    public void clickForms(){
+        elementsMethods.clickElement(formsButton);
+    }
+
     public void switchToDefault (){driver.switchTo().defaultContent();}
 
-
-
 }
+
+//public void clickElementsWithJavaScripts()
+//{
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//    js.executeScript("arguments[0].click();", elementsButton);
+//}

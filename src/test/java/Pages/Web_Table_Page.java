@@ -1,6 +1,8 @@
 package Pages;
 
 import Helper_Methodes.Elements_Methods;
+import Logger.LoggerUtility;
+import ObjectData.WebTableObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -95,14 +97,16 @@ public class Web_Table_Page {
         };
     }
 
-//    public void addEntry (String enterFirstName, String enterLastName, String enterAge, String  enterEmail,String enterSalary,String enterDep){
+//    public void addEntry (WebTableObject webTableObject){
 //        clickOnAddButton();
-//        setAddFirstNameField(enterFirstName);
-//        addLastNameField(enterLastName);
-//        addAge(enterAge);
-//        addUserEmail(enterEmail);
-//        addSalary(enterSalary);
-//        addDepartament(enterDep);
+          //LoggerUtility.infoTestCase("User clicked on add button")
+//        setAddFirstNameField(webTableObject.getEnterFirstName());
+          //LoggerUtility.infoTestCase("User entered First name")
+//        addLastNameField(webTableObject.getEnterLastName());
+//        addAge(webTableObject.getEnterAge());
+//        addUserEmail(webTableObject.getEnterEmail());
+//        addSalary(webTableObject.getEnterSalary());
+//        addDepartament(webTableObject.getEnterDep());
 //        clickOnSubmitButton();
 //
 //
@@ -113,32 +117,32 @@ public class Web_Table_Page {
     }
 
     public void setAddFirstNameField(String enterFirstName){
-        elementsMethods.fieldText(addFirstNameField, enterFirstName);
+        elementsMethods.fillText(addFirstNameField, enterFirstName);
 
     }
     public void addLastNameField(String enterLastName){
-        elementsMethods.fieldText(addLastNameField, enterLastName);
+        elementsMethods.fillText(addLastNameField, enterLastName);
 
     }
 
     public void addAge(String enterAge){
-        elementsMethods.fieldText(addAge, enterAge);
+        elementsMethods.fillText(addAge, enterAge);
 
     }
     public void addUserEmail(String enterEmail){
-        elementsMethods.fieldText(addUserEmail, enterEmail);
+        elementsMethods.fillText(addUserEmail, enterEmail);
 
     }
 
 
     public void addSalary(String enterSalary){
-        elementsMethods.fieldText(addSalary, enterSalary);
+        elementsMethods.fillText(addSalary, enterSalary);
 
     }
 
 
     public void addDepartament(String enterDep){
-        elementsMethods.fieldText(addDepartament, enterDep);
+        elementsMethods.fillText(addDepartament, enterDep);
 
     }
 
@@ -147,14 +151,14 @@ public class Web_Table_Page {
 
     }
 
-//    public void verifyEntry(String enterFirstName, String enterLastName, String enterEmail, String enterAge,String enterSalary,String enterDep ){
+//    public void verifyEntry(WebTableObject webTableObject ){
 //
-//        Assert.assertTrue(firstNameColumn.getText().equals(enterFirstName));
-//        Assert.assertTrue(lastNameColumn.getText().equals(enterLastName));
-//        Assert.assertTrue(ageColumn.getText().equals(enterAge));
-//        Assert.assertTrue(emailColumn.getText().equals(enterEmail));
-//        Assert.assertEquals(salaryColumn.getText(),enterSalary);
-//        Assert.assertTrue(departamentColumn.getText().equals(enterDep));
+//        Assert.assertTrue(firstNameColumn.getText().equals(webTableObject.getEnterFirstName()));
+//        Assert.assertTrue(lastNameColumn.getText().equals(webTableObject.getEnterLastName()));
+//        Assert.assertTrue(ageColumn.getText().equals(webTableObject.getEnterAge()));
+//        Assert.assertTrue(emailColumn.getText().equals(webTableObject.getEnterEmail()));
+//        Assert.assertEquals(salaryColumn.getText(),webTableObject.getEnterSalary());
+//        Assert.assertTrue(departamentColumn.getText().equals(webTableObject.getEnterDep()));
 //
 //    } // de elimminat pentru test 2
 

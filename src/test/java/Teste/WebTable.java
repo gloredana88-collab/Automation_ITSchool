@@ -1,9 +1,12 @@
 package Teste;
 
+import ObjectData.TextBoxObject;
+import ObjectData.WebTableObject;
 import Pages.Common_Page;
 import Pages.Home_Page;
 import Pages.Web_Table_Page;
 import Shared_data.Test_Base_Page;
+import XmlReader.XmlDataLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,8 +17,11 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class WebTable extends Test_Base_Page {
+//    private Map<String, WebTableObject> webTableObjectMap;
+
 
     @Test
     public void metodaTest() throws InterruptedException {
@@ -31,6 +37,8 @@ public class WebTable extends Test_Base_Page {
 //        String enterSalary = "15000";
 //        String enterDep = "accounting";
 
+//        webTableObjectMap = XmlDataLoader.loadData("C:\\Users\\glore\\IdeaProjects\\AutomationTestingFramework\\src\\test\\resources\\WebTableData.xml", WebTableObject.class);
+//        WebTableObject data = webTableObjectMap.get("dataSet_1");
 
         Home_Page homePage = new Home_Page(getDriver());
         homePage.clickElements();

@@ -21,6 +21,11 @@ public class Edge_Service_Browser implements IBrowser_Services{
 
         options.addArguments("start-maximized");
         options.addArguments("no-sandbox");
+//        String cicd = System.getProperty("ci_cd");
+//
+//        if(Boolean.parseBoolean(cicd)){
+//            options.addArguments("--headless");
+//        }
         return options;
     }
 

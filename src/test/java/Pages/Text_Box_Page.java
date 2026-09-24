@@ -1,5 +1,6 @@
 package Pages;
 
+import DataBase.Queries.TextBoxTable;
 import Helper_Methodes.Elements_Methods;
 import ObjectData.TextBoxObject;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import javax.xml.crypto.Data;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -16,11 +18,13 @@ public class Text_Box_Page {
 
     WebDriver driver;
     Elements_Methods elementsMethods;
+    TextBoxTable textBoxTable;
 
 
-    public Text_Box_Page(WebDriver driver) {
+    public Text_Box_Page(WebDriver driver) throws SQLException {
         this.driver = driver;
         this.elementsMethods = new Elements_Methods(driver);
+        this.textBoxTable = new TextBoxTable();
         PageFactory.initElements(driver, this);
     }
 
@@ -76,22 +80,22 @@ public class Text_Box_Page {
 
 
     public void addFullNameColum(String userName) {
-        elementsMethods.fieldText(addFullNameColum, userName);
+        elementsMethods.fillText(addFullNameColum, userName);
 
     }
 
     public void addEmail(String userEmail) {
-        elementsMethods.fieldText(addEmail, userEmail);
+        elementsMethods.fillText(addEmail, userEmail);
 
     }
 
     public void addCurrentAdress(String currentAddress) {
-        elementsMethods.fieldText(addCurrentAdress, currentAddress);
+        elementsMethods.fillText(addCurrentAdress, currentAddress);
 
     }
 
     public void addPermanentAdress(String permanentAddress) {
-        elementsMethods.fieldText(addPermanentAdress, permanentAddress);
+        elementsMethods.fillText(addPermanentAdress, permanentAddress);
 
     }
 
@@ -113,6 +117,10 @@ public class Text_Box_Page {
         String rowaddedText = rowAdded.getText();
         System.out.println(rowaddedText);
 
+    }
+
+    public void addEntryInTable(TextBoxObject data) throws SQLException {
+       textBoxTable.insertTableRow(data);
     }
 
 

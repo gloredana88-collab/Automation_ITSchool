@@ -1,0 +1,25 @@
+<dataSets>
+    <dataSet_1>
+        <enterFirstName>Loredana_1</enterFirstName>
+        <enterLastName>Popesc_1</enterLastName>
+        <enterAge>22</enterAge>
+        <enterEmail>test@test.com</enterEmail>
+        <enterSalary>10000</enterSalary>
+        <enterDep>Accounting</enterDep>
+    </dataSet_1>
+
+    <dataSet_2>
+        <enterFirstName>Loredana_2</enterFirstName>
+        <enterLastName>Popesc_2</enterLastName>
+        <enterAge>34</enterAge>
+        <enterEmail>test2@test.com</enterEmail>
+        <enterSalary>20000</enterSalary>
+        <enterDep>IT</enterDep>
+    </dataSet_2>
+</dataSets>
+
+
+
+
+
+
